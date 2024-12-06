@@ -5,7 +5,7 @@ thistuple = ("apple", "banana", "cherry")
 print(thistuple)
 
 # =============================================================================
-# LISTS IS:
+# TUPLES ARE:
 # 
 # ORDERED (indexed)
 # UNCHANGABLE!!! (we CANNOT change, add, and remove items)

@@ -6,7 +6,7 @@ mylist = ["apple", "banana", "cherry"]
 type(mylist)
 
 # =============================================================================
-# LISTS IS:
+# LISTS ARE:
 # 
 # ORDERED (indexed)
 # CHANGABLE (change, add, and remove items)
