@@ -231,44 +231,129 @@ thisdict.clear()
 print(thisdict)
 
 
+# =============================================================================
+# Loop Dictionaries
+# =============================================================================
+
+# for loop.
+
+#key
+for x in thisdict:
+  print(x)
+
+#value
+for x in thisdict:
+  print(thisdict[x])
+
+
+for x in thisdict.values():
+  print(x)
+
+for x in thisdict.keys():
+  print(x)
+
+for x, y in thisdict.items():
+  print(x, y)
 
 
 
+# =============================================================================
+# Copy a Dictionary
+# =============================================================================
+
+
+# =============================================================================
+# You cannot copy a dictionary simply by typing dict2 = dict1, because: dict2 will only be a reference to dict1, and changes made in dict1 will automatically also be made in dict2.
+# There are ways to make a copy, one way is to use the built-in Dictionary method copy(). 
+# =============================================================================
+
+
+#copy() method
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+
+# dict() function
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
+
+
+# =============================================================================
+# Nested Dictionaries
+# =============================================================================
+
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+
+# Create three dictionaries, then create one dictionary that will contain the other three dictionaries:
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+
+# Access Items in Nested Dictionaries
+print(myfamily["child2"]["name"])
+
+# Loop Through Nested Dictionaries
+for key, value in myfamily.items():
+  print(key)
+
+  for x in value:
+    print(x + ':', value[x])
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# =============================================================================
+# Dictionary Methods
+# =============================================================================
+# 
+# Method	       Description
+# clear()	       Removes all the elements from the dictionary
+# copy()	       Returns a copy of the dictionary
+# fromkeys()	   Returns a dictionary with the specified keys and value
+# get()	           Returns the value of the specified key
+# items()	       Returns a list containing a tuple for each key value pair
+# keys()	       Returns a list containing the dictionary's keys
+# pop()	           Removes the element with the specified key
+# popitem()        Removes the last inserted key-value pair
+# setdefault()	   Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+# update()	       Updates the dictionary with the specified key-value pairs
+# values()	       Returns a list of all the values in the dictionary
+# =============================================================================
